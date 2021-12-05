@@ -1,0 +1,128 @@
+grid_search:
+  module: sklearn.model_selection
+  class: GridSearchCV
+  params:
+    cv: 3
+    verbose: 1
+
+clustering:
+  module: sklearn.cluster
+  class: KMeans
+  params:
+    init: k-means++
+    random_state: 10
+  search_cluster:
+    start: 1
+    stop: 11
+
+
+stack:
+  layer_0:
+    - model_0
+    - model_1
+  layer_1:
+    - model_1
+
+stack_output_layer: layer_1
+
+model_selection:
+  model_0:
+    module: xgboost
+    class: XGBClassifier
+    search_param_grid:
+      n_estimators:
+        - 10
+        - 50
+        - 20
+        - 30
+        - 100
+        - 200
+      learning_rate:
+        - 0.5
+        - 0.1
+        - 0.01
+        - 0.03
+        - 0.08
+        - 0.001
+      max_depth:
+        - 3
+        - 5
+        - 10
+        - 20
+        - 50
+  model_1:
+    module: sklearn.ensemble
+    class: RandomForestClassifier
+    params: 
+      random_state: 5
+    search_param_grid:
+      n_estimators:
+        - 10
+        - 50
+        - 250
+      max_depth:
+        - 2
+        - 4
+        - 6
+        - 8
+        - 10
+        - 15
+        - 20
+        - 24
+        - 28
+        - 30
+        - 32
+      max_features:
+        - sqrt
+        - 0.25
+        - 0.5
+        - 0.75
+        - 1.0
+      min_samples_split:
+        - 2
+        - 5
+        - 6
+
+      min_samples_leaf:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+  model_2:
+    module: sklearn.tree
+    class: DecisionTreeClassifier
+    search_param_grid:
+      criterion:
+        - gini
+        - entropy
+      max_depth:
+        - 2
+        - 4
+        - 6
+        - 8
+        - 10
+        - 15
+        - 20
+        - 24
+        - 28
+        - 30
+        - 32
+      min_samples_leaf:
+        - 2
+        - 4
+        - 6
+        - 8
+        - 10
+      min_samples_split:
+        - 2
+        - 4
+        - 6
+        - 8
+        - 10
+      splitter:
+        - best
+        - random
+
+      
+      

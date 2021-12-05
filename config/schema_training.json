@@ -1,0 +1,16 @@
+{	"SampleFileName": "Seeds_26092020_131534.csv",
+	"LengthOfDateStampInFile": 8,
+	"LengthOfTimeStampInFile": 6,
+	"NumberofColumns" : 8,
+	"ColName": {"area": "float64",
+		"perimeter": "float64",
+		"compactness": "float64",
+		"length_of_kernel": "float64",
+		"width_of_kernel": "float64",
+		"asymmetry_coefficient": "float64",
+		"length_of_kernel_groove": "float64",
+		"Type": "int64"}
+
+		
+}
+ 

@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Mission%20150/wheat-classification/Wheat%20classification/mlruns/1/f721a9a536934c98a7c3f65fd3ca0dc8/artifacts
+end_time: 1631081924210
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: f721a9a536934c98a7c3f65fd3ca0dc8
+run_uuid: f721a9a536934c98a7c3f65fd3ca0dc8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1631081595471
+status: 3
+tags: []
+user_id: anish
